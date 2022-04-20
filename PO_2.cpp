@@ -300,7 +300,7 @@ int main() {
 						ideal_apartament = apartamente[i];
 			}
 			else {
-				for (i = 0; i < apartamente.size() - 1; i++)
+				for (i = 0; i < apartamente.size(); i++)
 					if (apartamente[i].get_suprafata_utila() < ideal_apartament.get_suprafata_utila())
 						ideal_apartament = apartamente[i];
 			}
@@ -344,7 +344,7 @@ int main() {
 								ideal_casa = casa[i];
 					}
 					else {
-						for (i = 0; i < casa.size() - 1; i++)
+						for (i = 0; i < casa.size(); i++)
 							if (casa[i].get_suprafata_utila() < ideal_casa.get_suprafata_utila())
 								ideal_casa = casa[i];
 					}
