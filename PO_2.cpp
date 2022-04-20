@@ -256,6 +256,8 @@ int main() {
 	Casa ideal_casa;
 	cout<<"Bine ati venit la agentia Rares.Avem disponibile " << Apartament::get_numar_apartamente() << " apartamente si " << Casa::get_numar_case() << " case. Ce cauti ? \n";
 	while (agentie != false) {
+		apartamente.clear();
+		casa.clear();
 		ok = true; //folosim ok pentru a ramane in while pana cand se introduce un etaj/teren existent
 		cout<<"\n \n \n \n";
 		cout<<"1-apartament \n";
@@ -306,8 +308,8 @@ int main() {
 			}
 			cout << "Apartamentul ideal pentru dumneavoastra are o suprafata de " << ideal_apartament.get_suprafata_utila() << " mp" <<
 				". Veti primi un discount o data la trei luni de plati ale chiriei de " << ideal_apartament.get_discount() << "%. Chiria este de "; ideal_apartament.calcul_chirie(pret_mp_apartament, 1);
-			cout << "cu discount. Fara discount chiria este de "; ideal_apartament.calcul_chirie(pret_mp_apartament, 0); cout << "\n";
-			cout << "Numele fostului chirias este " << ideal_apartament.get_client() << " daca doritit sa intrati in contact. \n";
+			cout << " cu discount. Fara discount chiria este de "; ideal_apartament.calcul_chirie(pret_mp_apartament, 0); cout << "\n";
+			cout << "Numele fostului chirias este " << ideal_apartament.get_client() << " daca doriti sa intrati in contact. \n";
 			break; //afisam detalii despre apartament
 		case 2:
 			cout << "Cati mp(metri patrati) sa aiba curtea? \n";
@@ -350,8 +352,8 @@ int main() {
 					}
 					cout << "Casa ideala pentru dumneavoastra are o suprafata de " << ideal_casa.get_suprafata_utila() << " mp. Si un teren de " << ideal_casa.get_suprafata_teren() <<
 						"mp. Veti primi un discount o data la trei luni de plati ale chiriei de " << ideal_casa.get_discount() << "%. Chiria este de "; ideal_casa.calcul_chirie(pret_mp_casa, 1);
-					cout << "cu discount. Fara discount chiria este de "; ideal_casa.calcul_chirie(pret_mp_casa, 0); cout << "\n";
-					cout << "Numele fostului chirias este " << ideal_casa.get_client() << " daca doritit sa intrati in contact. \n";
+					cout << " cu discount. Fara discount chiria este de "; ideal_casa.calcul_chirie(pret_mp_casa, 0); cout << "\n";
+					cout << "Numele fostului chirias este " << ideal_casa.get_client() << " daca doriti sa intrati in contact. \n";
 					break;
 		case 3:
 			agentie = false;
