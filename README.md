@@ -1,31 +1,24 @@
-										Agentie Imobiliara
+									Real Estate Agency
 
-Am creat 3 clase (Locuinta,Aparatament,Casa) prin mostenire (clasele Apartament si Casa sunt derivate din clasa de baza Locuinta).
+I created 3 classes (Locuinta(place to live), Apartament(apartment), Casa(house)). I used inheritance (classes Apartment and House are derived from Place class).
 
-Toate cele 3 clase au: functii set si get (pentru a seta sau returna variabile),constructori de initializare,parametrizati si de copiere,destructori,supraincarcarea operatorului = .
-Constructorii parametrizati si constructorii de copiere ai claselor derivate transmit parametrii catre constrocturul de baza.
+All of the 3 classes have set and get functions, constructors, destructors, the overloaded = operator.
 
-Clasa de baza contine o functie virtuala pura pentru a calculca chiria. Variabilele suprafata_utila si discount sunt protected,deoarece avem nevoie de acces la ele cand definim functia in clasele derivate.
-Functiile afisare si citire sunt virtuale,deoarece folosim pointeri. Astfel citirea se va face corect pentru fiecare obiect.
+The base class contains a pure virtual function for calculating rent. Attributes suprafata_utila(usable surface) and discount are protected, because we need access when we are defining the virtual function in the derived classes.
 
-Clasele Apartament si Casa contin cate o o variablia statica care creste cu unu la crearea unui obiect si o functie statica care o returneaza. Astfel putem numara cate obiecte am creat.
+The read and write functions are virtual, because we are using pointers.
 
-Meniu interactiv
+Classes Apartment and House have a static variable to keep track of the number of objects created and static function which returns this variable.
 
-Citim din fisierul input.txt un vector de pointeri la Locuinta pe care care il incarcam cu obiecte de tip Casa sau Apartament.(upcasting)
+Interactive Menu
 
-Prima Optiune: ajuta la alegerea unui apartament in functie de preferinte(daca acesta se afla in vector)
-Se creeaza un vector cu obiecte Apartament pentru a lucra mai usor pe obiecte.Inainte de a face acest lucru efectuam downcasting pentru a avea pointerul de tipul Apartament.
-Verificam daca downcastingul este efectuat corect folosind try-catch.
-Se alege etajul dorit, iar daca acesta nu exista in vector se afiseaza un mesaj corespunzator.
-Se alege daca apartamentul dorit va fi mare sau mic.
-Se afiseaza datele despre apartamentul ales.
+We put objects of type House and Apartment into a vector of Place pointers(upcasting).
 
-A Doua Optiune: ajuta la alegerea uneai case in functie de preferinte
-Facem acelasi lucru ca la Prima Optiune, doar ca folosim clasa Casa si in loc de etaj se alege dimensiunea terenului.
+First option: It helps pick an apartment based on preferences. We create a vector of Apartment objects. Before doing that we downcast, so that we have a pointer to an Apartment object.
+We check the downcast in a try-catch block.
 
-A Treia Optiune: te scoate din meniul interactiv
+Second Option: Same as option one, but instead of an apartment we are looking for a house.
 
-A Patra Optiune: afiseaza lista cu locuintele din vector impreuna cu chiria
+Third Option: Exits the interactive menu.
 
-La iesire din meniu sunt cateva operatii simple care arata functionalitatea constructorilor.
+Fourth Option: Lists the Places and their rent.
